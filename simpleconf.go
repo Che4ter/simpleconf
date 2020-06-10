@@ -13,7 +13,7 @@ func LoadConfig(configPath string, config interface{}) error {
 		if err := createEmptyConfig(configPath, config); err != nil {
 			return err
 		}
-		return errors.New("Config file not found, initialized new under " + configPath)
+		return errors.New("Config file not found, initialized under " + configPath)
 	} else {
 		f, err := os.Open(configPath)
 		if err != nil {
